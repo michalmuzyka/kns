@@ -8,10 +8,12 @@ namespace Kns
 {
     internal static class RepetitionRemover
     {
-        public static void RemoveRepetition(StringBuilder word)
+        public static string RemoveRepetition(StringBuilder word)
         {
+            string repetition = string.Empty;
+
             if (word == null || word.Length < 2)
-                return;
+                return repetition;
 
             var lastPos = word.Length - 1;
             var sameAsLastCharPostions = new List<int>();
@@ -39,11 +41,13 @@ namespace Kns
 
                 if (ok)
                 {
+                    repetition = word.ToString(pos + 1, len);
                     word.Remove(pos + 1, len);
                     break;
                 }
             }
 
+            return repetition;
         }
 
     }

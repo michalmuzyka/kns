@@ -1,0 +1,19 @@
+﻿<Application x:Class="GK.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GK"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <local:IsNullConverter x:Key="isNullConverter" />
+        <local:PlayerToColorConverter x:Key="playerToColorConverter" />
+        <local:PlayerToStringConverter x:Key="playerToStringConverter" />
+        <local:WinnerToStringConverter x:Key="winnerToStringConverter" />
+    </Application.Resources>
+</Application>
