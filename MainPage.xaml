@@ -35,7 +35,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Label Content="Parameter a:" Grid.Column="0"/>
-                        <xctk:IntegerUpDown Grid.Column="1" Value="{Binding Path=a}" Width="100" Minimum="10" Maximum="100" />
+                        <xctk:IntegerUpDown Grid.Column="1" Value="{Binding Path=a}" Width="100" Minimum="1" Maximum="26" />
                     </Grid>
 
                     <Grid Margin="10">
